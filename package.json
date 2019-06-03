@@ -1,0 +1,15 @@
+{
+  "name": "fodboilerplate",
+  "version": "1.0.0",
+  "description": "BoilerPlate For FOD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "author": "ahwelgemoed",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.20.3"
+  }
+}

@@ -1,0 +1,36 @@
+.redBox {
+  height: 100px;
+  width: 100px;
+  background: #eb4646;
+  border-radius: 0%;
+  /* animation-name: move;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: both; */
+}
+.redBox:after {
+  content: ' KeyFrames';
+}
+
+@keyframes move {
+  /* CSS PROPERTY TO ANIMATE */
+  from {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+/* Basic Animation */
+
+/* animation-fill-mode: 4 Values forwards backwords both none  */
+
+/* None Do Nothing after Animation so Take to Start */
+/* Forwards Last Props and keeps that */
+/* BackWards first Props and keeps that before animation */
+
+/* Repeat */
+
+/* Direction */
+
+/* Timing */

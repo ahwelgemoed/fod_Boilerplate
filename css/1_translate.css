@@ -3,6 +3,9 @@
   width: 100px;
   background: #eb4646;
 }
+.redBox:after {
+  content: ' Translate';
+}
 .animation {
   /* transform: translateX(100px); */
   /* transform: translateY(100px); */

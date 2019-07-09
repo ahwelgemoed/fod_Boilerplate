@@ -1,0 +1,31 @@
+.redBox {
+  height: 100px;
+  width: 100px;
+  background: #eb4646;
+  border-radius: 0%;
+  transition: all 500ms;
+  /* transition: background 500ms */
+  /* transition: background 500ms, transform 500ms;` */
+}
+.redBox:after {
+  content: ' Transitions';
+}
+
+.redBox:hover {
+  background: #46d5eb;
+  border-radius: 10%;
+  /* transform: rotate(180deg); */
+}
+
+/* Transition Goes On Element Itself Not Pseudo Element*/
+
+/* Target - But usually Use all */
+
+/* transition background (time)(delay)(ease), */
+
+/* ease-in-out; */
+
+/* cubic-bezier(0.17, 0.67, 0.74, 0.03); */
+/* 
+https://cubic-bezier.com
+https://www.w3schools.com/cssref/css3_pr_transition.asp */

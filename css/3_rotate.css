@@ -1,0 +1,15 @@
+.redBox {
+  height: 100px;
+  width: 100px;
+  background: #eb4646;
+}
+.redBox:after {
+  content: ' Rotate';
+}
+
+.animation {
+  /* transform: rotateX(45deg); */
+  /* transform: rotateY(45deg); */
+  /* transform: rotateZ(45deg);
+  transform-origin: 50% 50% 0; */
+}

@@ -1,0 +1,10 @@
+.redBox {
+  height: 100px;
+  width: 100px;
+  background: #eb4646;
+}
+.animation {
+  /* transform: translateX(100px); */
+  /* transform: translateY(100px); */
+  /* transform: translate(100px, 100px); */
+}

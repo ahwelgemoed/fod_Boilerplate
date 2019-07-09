@@ -2,13 +2,11 @@ html {
   box-sizing: border-box;
   font-size: 16px;
 }
-
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
-
 body,
 h1,
 h2,
@@ -25,17 +23,14 @@ ul {
   font-family: 'Roboto';
   text-align: center;
 }
-
 ol,
 ul {
   list-style: none;
 }
-
 img {
   max-width: 100%;
   height: auto;
 }
-
 #mainBody {
   min-height: 100vh;
   display: flex;

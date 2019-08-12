@@ -24,6 +24,8 @@ import '../css/main.scss';
 
 let hederText = document.getElementById('headerText');
 let ThreeBoxes = document.getElementById('ThreeBoxes');
+let playButton = document.getElementById('playButton');
+let pauseButton = document.getElementById('pauseButton');
 let box = document.getElementsByClassName('box');
 
 const tl = new TimelineMax();
@@ -31,3 +33,12 @@ const tl = new TimelineMax();
 tl.from(headerText, 1, { opacity: 0 })
   .from(ThreeBoxes, 1, { y: 500 }, '-=1')
   .staggerFrom(box, 1, { height: 100 }, 0.2, '-=0.5');
+
+tl.pause();
+
+playButton.onclick = function() {
+  tl.play();
+};
+pauseButton.onclick = function() {
+  tl.pause();
+};

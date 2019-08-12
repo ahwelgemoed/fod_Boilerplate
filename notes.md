@@ -64,3 +64,33 @@ Absolute Positioning is replace '-=0.1' with 3 = will wait for 3 sec mark to run
 labels
 
 .add(NOW)
+
+Controll Playback
+
+tl.pause()
+
+tl.play()
+
+tl.resume()
+
+tl.reverse()
+
+tl.timeScale(3)
+
+tl.timeScale(0.2)
+
+// Value passed is the seconds where is goes
+
+tl.seek(1)
+
+// 0 is start 1 is the end
+
+tl.progress(0 - 1)
+
+tl.restart()
+
+Cycle and Stagger
+
+PreLoader
+
+repeat ;-1

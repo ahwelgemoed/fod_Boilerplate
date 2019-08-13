@@ -49,7 +49,6 @@ tl.from(Desk, 1, { opacity: 0, y: 100 })
   );
 
 function onComplete() {
-  console.log('Done');
   let ccs = new TimelineMax({ repeat: -1 });
   ccs
     .from(ccsBox, 1, { paddingLeft: 150 })

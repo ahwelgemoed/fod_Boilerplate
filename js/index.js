@@ -1,27 +1,5 @@
 import '../css/main.scss';
 
-// let creditCard = document.getElementById('creditCard');
-// let scrollTimeLine = new TimelineMax();
-// // TweenLite.to(elem, 1, {vars});
-
-// scrollTimeLine.to(creditCard, 3, { scale: 1 });
-
-// //☄️ Scroll Magic Controller  ☄️//
-
-// let controller = new ScrollMagic.Controller();
-
-// //☄️ Scroll Magic fot Scene  ☄️//
-
-// let sceneForCard = new ScrollMagic.Scene({
-//   triggerElemet: '.trigger1',
-//   triggerHook: 0,
-//   duration: '30%'
-// })
-//   .setTween(scrollTimeLine)
-//   .setPin('.trigger1')
-//   .addIndicators()
-//   .addTo(controller);
-
 let controller = new ScrollMagic.Controller();
 
 let mainCreditCard = document.getElementById('mainCreditCard');
@@ -46,7 +24,6 @@ let sceneTOne = new ScrollMagic.Scene({
 })
   .setTween(sceneOneTimeLine)
   .addIndicators()
-  // .setPin('.sceneTwoTrigger')
   .addTo(controller);
 
 let sceneTwo = new ScrollMagic.Scene({

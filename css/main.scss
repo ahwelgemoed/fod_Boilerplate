@@ -35,10 +35,36 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 #mainBody {
-  min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+section {
+  height: 100vh;
+  width: 100%;
+  background: #efefef;
+  z-index: -1;
+}
+h1 {
+  padding-top: 10vh;
+  font-size: 3rem;
+}
+.sceneTwoTrigger img {
+  padding-top: 40vh;
+}
+// #mainCreditCard {
+//   transform: scale(8);
+//   z-index: -1;
+//   position: absolute;
+//   // transform-origin: center center;
+//   // top: 0;
+//   // left: 0;
+//   // padding-top: 100px;
+// }
+#redCreditCard,
+#payMore,
+#goldCreditCard {
+  opacity: 0;
 }

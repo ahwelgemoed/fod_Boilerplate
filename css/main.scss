@@ -2,3 +2,72 @@ html {
   box-sizing: border-box;
   font-size: 16px;
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: 'Roboto';
+  text-align: center;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#mainBody {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#headerText {
+  font-size: 3rem;
+  opacity: 1;
+}
+#body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#ThreeBoxes {
+  margin-top: 40px;
+  width: 80vw;
+  // transform-origin: 'bottom';
+  z-index: 9;
+}
+.box {
+  width: 200px;
+  transform-origin: 'center' 'top';
+}
+.box:nth-child(2) {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+#bg {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  // max-height: 400px;
+}

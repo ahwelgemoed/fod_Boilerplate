@@ -41,4 +41,32 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+#headerText {
+  font-size: 3rem;
+  opacity: 1;
+}
+#body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#ThreeBoxes {
+  margin-top: 40px;
+  width: 80vw;
+  z-index: 9;
+}
+.box {
+  width: 200px;
+  transform-origin: 'center' 'top';
+}
+.box:nth-child(2) {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+#bg {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  // max-height: 400px;
 }

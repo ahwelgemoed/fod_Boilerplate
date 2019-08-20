@@ -6,7 +6,7 @@ let codeBlock1 = document.getElementsByClassName('codeBlock1');
 let codeBlock2 = document.getElementsByClassName('codeBlock2');
 let codeBlock3 = document.getElementsByClassName('codeBlock3');
 
-let tl = new TimelineMax({ onComplete });
+let tl = new TimelineMax({ onComplete, onUpdate });
 
 tl.from(Desk, 1, { opacity: 0, y: 100 })
   .from(
@@ -58,7 +58,9 @@ function onComplete() {
   let js = new TimelineMax({ repeat: -1 });
   js.to(jsBox, 1, { paddingLeft: 10 }).to(jsBox, 0.5, { paddingLeft: 0 });
 }
-
+function onUpdate() {
+  console.log('onUpdate');
+}
 tl.pause();
 
 var play = document.getElementById('play');

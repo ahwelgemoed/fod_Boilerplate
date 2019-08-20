@@ -30,6 +30,11 @@ ol,
 ul {
   list-style: none;
 }
+input,
+button,
+submit {
+  border: none;
+}
 
 img {
   max-width: 100%;
@@ -70,4 +75,14 @@ h1 {
   padding-top: 5%;
   padding-left: 40%;
   font-size: 3rem;
+}
+#buttonGroup {
+  padding-top: 5%;
+  padding-left: 52%;
+  width: 90%;
+  button {
+    background: #efefef;
+
+    font-size: 1rem;
+  }
 }

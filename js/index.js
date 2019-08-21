@@ -40,9 +40,7 @@ fast.onclick = function() {
 seek.onclick = function() {
   tl.seek('lastCss');
 };
-progress.onclick = function() {
-  // tl.progress('lastCss');
-};
+
 To.onclick = function() {
   tl.tweenTo('lastCss');
 };
@@ -103,8 +101,8 @@ function myUpdateFunc() {
 
 var sceneTOne = new ScrollMagic.Scene({
   triggerElement: '#trigger',
-  // duration: 100
-  triggerHook: 0
+  duration: 100,
+  triggerHook: 0.3
 })
   .setTween(tl)
   .addIndicators()

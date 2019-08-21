@@ -112,7 +112,7 @@ tl.add(LABEL)
 
 ## JS events to Controll Animation
 
-All JS events can Trigger Animation
+Most JS events can Trigger An Animation
 
 Full List Can be Found [Here](https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events)
 
@@ -144,3 +144,17 @@ var sceneOne = new ScrollMagic.Scene({
   .addIndicators()
   .addTo(controller);
 ```
+
+`triggerElemet` where the trigger is in the dom
+
+`duration` is how long the scroll animation will be - if removed animation will trigger on scroll
+
+`triggerHook` Be in Class You had to be there
+
+**Chain Elements**
+
+`.setTween()` - is the Tween or Timeline to trigger on scroll.
+
+`.addIndicators()` Only For Dev
+
+`.addTo(controller)` Boilerplate work (Dont Worry)

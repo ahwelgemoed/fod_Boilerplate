@@ -1,2 +1,7 @@
 import '../css/main.scss';
-console.log('You Code Here As well - Niccccce 🔥');
+
+var dotsArray = document.getElementById('dotsArray');
+
+var pageOpenTimeline = new TimelineMax();
+
+pageOpenTimeline.from(dotsArray, 2, { top: '-60%' });

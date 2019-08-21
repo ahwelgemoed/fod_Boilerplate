@@ -41,4 +41,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  background: #333333;
+}
+h1 {
+  font-size: 5rem;
+  color: #fff;
+}
+#dotsArray {
+  position: absolute;
+  top: -50%;
+  left: -10%;
 }

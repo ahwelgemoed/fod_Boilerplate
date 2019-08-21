@@ -1,5 +1,7 @@
 import '../css/main.scss';
 
+let controller = new ScrollMagic.Controller();
+
 var desk = document.getElementsByClassName('Desk');
 var jsBox = document.getElementsByClassName('jsBox');
 var cssBox = document.getElementsByClassName('cssBox');
@@ -17,7 +19,7 @@ var progress = document.getElementById('progress');
 var To = document.getElementById('To');
 
 var tl = new TimelineMax({ onComplete: myDoneFunc, onUpdate: myUpdateFunc });
-tl.pause();
+// tl.pause();
 
 play.onclick = function() {
   tl.play();
@@ -36,10 +38,10 @@ fast.onclick = function() {
   tl.timeScale(0.5);
 };
 seek.onclick = function() {
-  tl.seek(0.8);
+  tl.seek('lastCss');
 };
 progress.onclick = function() {
-  tl.progress(0.5);
+  // tl.progress('lastCss');
 };
 To.onclick = function() {
   tl.tweenTo('lastCss');
@@ -98,3 +100,12 @@ var i = 0;
 function myUpdateFunc() {
   console.log(i++);
 }
+
+var sceneTOne = new ScrollMagic.Scene({
+  triggerElement: '#trigger',
+  // duration: 100
+  triggerHook: 0
+})
+  .setTween(tl)
+  .addIndicators()
+  .addTo(controller);

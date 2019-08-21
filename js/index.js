@@ -1,6 +1,6 @@
 import '../css/main.scss';
 
-let controller = new ScrollMagic.Controller();
+// let controller = new ScrollMagic.Controller();
 
 var desk = document.getElementsByClassName('Desk');
 var jsBox = document.getElementsByClassName('jsBox');
@@ -45,9 +45,9 @@ To.onclick = function() {
   tl.tweenTo('lastCss');
 };
 
-tl.from(desk, 1, { y: 200 })
+tl.from(desk, 1, { y: 200, opacity: 0 })
   .add('lastCss')
-  .from(codeBlock1, 0.5, { y: -200 }, '-=0.5')
+  .from(codeBlock1, 0.5, { y: -200, opacity: 0 }, '-=0.5')
   .from(codeBlock2, 0.5, {
     opacity: 0,
     y: -100
@@ -99,11 +99,11 @@ function myUpdateFunc() {
   console.log(i++);
 }
 
-var sceneTOne = new ScrollMagic.Scene({
-  triggerElement: '#trigger',
-  duration: 100,
-  triggerHook: 0.3
-})
-  .setTween(tl)
-  .addIndicators()
-  .addTo(controller);
+// var sceneTOne = new ScrollMagic.Scene({
+//   triggerElement: '#trigger',
+//   duration: 100,
+//   triggerHook: 0.3
+// })
+//   .setTween(tl)
+//   .addIndicators()
+//   .addTo(controller);

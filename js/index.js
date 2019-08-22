@@ -1,7 +1,5 @@
 import '../css/main.scss';
 
-// let controller = new ScrollMagic.Controller();
-
 var desk = document.getElementsByClassName('Desk');
 var jsBox = document.getElementsByClassName('jsBox');
 var cssBox = document.getElementsByClassName('cssBox');
@@ -98,12 +96,3 @@ var i = 0;
 function myUpdateFunc() {
   console.log(i++);
 }
-
-// var sceneTOne = new ScrollMagic.Scene({
-//   triggerElement: '#trigger',
-//   duration: 100,
-//   triggerHook: 0.3
-// })
-//   .setTween(tl)
-//   .addIndicators()
-//   .addTo(controller);

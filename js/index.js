@@ -8,11 +8,12 @@ var white1svg = document.getElementById('white1svg');
 var i = 1;
 var pageOpenTimeline = new TimelineMax();
 var chnageBackGroundColor = new TimelineMax();
-
+// window.innerWidth
 var white1svgPath = {
-  curviness: 1.5,
-  autoRotate: false,
-  type: 'soft',
+  // curviness: 1.5,
+  // autoRotate: true,
+  // type: 'cubic',
+  // type: 'thru',
   values: [
     { left: '10%', bottom: '15%', rotation: 0 },
     { left: '15%', bottom: '25%', rotation: 90 },
@@ -23,15 +24,21 @@ var white1svgPath = {
 };
 
 pageOpenTimeline
+  .set(dotsArray, { top: '-50%', left: '-10%' })
   .from(dotsArray, 2, { top: '-60%' })
   .from(yello2svg, 2, { right: '-5%', opacity: 0 }, '-=1.5')
-  .to(white1svg, 2, { bezier: white1svgPath }, '-=2.5');
+  .to(
+    white1svg,
+    3,
+    { bezier: white1svgPath, ease: Power4.easeOut, opacity: 0.5 },
+    '-=2.5'
+  );
 
 let controller = new ScrollMagic.Controller();
 var sceneTOne = new ScrollMagic.Scene({
-  triggerElement: '#trigger',
-  duration: '30%',
-  triggerHook: 0
+  triggerElement: '#trigger'
+  // duration: '30%'
+  // triggerHook: 0
 })
   .setTween(pageOpenTimeline)
   .addIndicators()

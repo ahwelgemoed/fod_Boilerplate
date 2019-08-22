@@ -1,28 +1,6 @@
-# Boiler Plate for FOD - CSS Animation
-
-#### Project was created with ParcelsJS and SpectreCSS
-
-##### How To Use
-
-_Clone the Repo_
-
-`$ git clone https://github.com/ahwelgemoed/fod_Boilerplate.git`
-
-_cd to the folder_
-
-`$ cd fod_boilerplate`
-
-_Install Node_Modules_
-
-`$ yarn` or `$ npm install`
-
-_run the project_
-
-`$ yarn start` or `$ npm run start`
-
 ## Notes / Cheat Sheet
 
-NB - Always Import The GSAP JS files after your own JS Link Here
+**NB - Always Import The GSAP JS files after your own JS Link Here**
 
 ### Tween
 
@@ -90,7 +68,7 @@ tl.to(element1, 1, { x: 50, y: 0 }).to(element2, 1, { x: 50, y: 0 }, TIME);
 
 #### Label
 
-Label work similat that adjusting the Time abut you are naming it
+Label work simulate that adjusting the time abut you are naming it
 
 ```javascript
 tl.add(LABEL)
@@ -98,7 +76,7 @@ tl.add(LABEL)
   .to(element2, 1, { x: 50, y: 0 }, LABEL);
 ```
 
-## Control Your Timeline
+## Control Your Timeline with Playback Functions
 
 `tl.play(1.5)` Play from 1.5s
 `tl.play(-1);` Play 1s from end
@@ -107,10 +85,10 @@ tl.add(LABEL)
 `tl.seek(1.5);` Go to 1.5s or 'label'
 `tl.reverse();` Reverse playback anytime
 `tl.timeScale(2);` Speed up timeline
-`tl.tweenTo('LABEL');` Skips To That Lable in the Timeline
+`tl.tweenTo('LABEL');` Skips To That Label in the Timeline
 `tl.progress(0.5);` Skip to halfway
 
-## JS events to Controll Animation
+## JS events to Control Animation
 
 Most JS events can Trigger An Animation
 
@@ -124,7 +102,12 @@ button.addEventListener('mouseenter', function() {
 });
 ```
 
-## Scroll Controll Of Animation
+## Animation Callbacks
+
+`onStart` `onComplete` `onUpdate`
+`onRepeat` `onRepeatParams` `onReverseComplete`
+
+## Scroll Control Of Animation
 
 ADD on for GSAP called Scroll Magic (CDN HERE)
 

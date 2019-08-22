@@ -1,6 +1,6 @@
 ## Notes / Cheat Sheet
 
-**NB - Always Import The GSAP JS files after your own JS Link Here**
+**_NB_ - Always Import The GSAP JS files after your own JS Link Here**
 
 ### Tween
 
@@ -12,11 +12,11 @@ TweenMax.to(elem, time, { vars });
 
 `.to()` / `.from()`
 
-`elem` is the element you want to animate (Target this with its ID or ClassName)
+`elem` is the element you want to animate _(Target this with its ID or ClassName)_
 
 `time` is the duration of the Animation
 
-`vars` is and JS Object of vars you want to Animate (CSS)
+`vars` is and JS Object of vars you want to Animate _(CSS)_
 
 #### Stagger Tween
 
@@ -215,8 +215,10 @@ var sceneOne = new ScrollMagic.Scene({
 
 **Chain Elements**
 
-`.setTween()` - is the Tween or Timeline to trigger on scroll.
+`.setTween()` is the Tween or Timeline to trigger on scroll.
 
-`.addIndicators()` Only For Dev
+`.addIndicators()` Only For Dev _(optional)_
 
-`.addTo(controller)` Boilerplate work (Dont Worry)
+`.setPin('WHERE_TO_PIN')` Pins Scene and releases it after. _(optional)_
+
+`.addTo(controller)` Boilerplate work (Don't Worry)

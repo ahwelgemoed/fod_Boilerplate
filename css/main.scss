@@ -35,13 +35,16 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-#mainBody {
-  min-height: 100vh;
+section {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+#mainBody {
+  min-height: 100vh;
+
   background: #333333;
 }
 h1 {

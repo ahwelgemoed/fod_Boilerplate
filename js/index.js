@@ -9,20 +9,33 @@ var i = 1;
 var pageOpenTimeline = new TimelineMax();
 var chnageBackGroundColor = new TimelineMax();
 
+var white1svgPath = {
+  curviness: 1.5,
+  autoRotate: false,
+  type: 'soft',
+  values: [
+    { left: '10%', bottom: '15%', rotation: 0 },
+    { left: '15%', bottom: '25%', rotation: 90 },
+    { bottom: '55%', left: '15%', rotation: 180 },
+    { bottom: '55%', left: '40%', rotation: 180 },
+    { bottom: '40%', left: '40%', rotation: 180 }
+  ]
+};
+
 pageOpenTimeline
   .from(dotsArray, 2, { top: '-60%' })
   .from(yello2svg, 2, { right: '-5%', opacity: 0 }, '-=1.5')
-  .from(white1svg, 2, { left: '-5%', opacity: 0 }, '-=2.5');
+  .to(white1svg, 2, { bezier: white1svgPath }, '-=2.5');
 
-// let controller = new ScrollMagic.Controller();
-// var sceneTOne = new ScrollMagic.Scene({
-//   triggerElement: '#trigger',
-//   duration: 100,
-//   triggerHook: 0.3
-// })
-//   .setTween(tl)
-//   .addIndicators()
-//   .addTo(controller);
+let controller = new ScrollMagic.Controller();
+var sceneTOne = new ScrollMagic.Scene({
+  triggerElement: '#trigger',
+  duration: '30%',
+  triggerHook: 0
+})
+  .setTween(pageOpenTimeline)
+  .addIndicators()
+  .addTo(controller);
 
 // chnageBackGroundColor.to(mainBody, 0.5, { backgroundColor: '#cc2525' });
 // chnageBackGroundColor.pause();

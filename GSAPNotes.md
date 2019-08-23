@@ -1,6 +1,10 @@
-## Notes / Cheat Sheet
+# Notes / Cheat Sheet
 
-**_NB_ - Always Import The GSAP JS files after your own JS Link Here**
+#### OPEN YOUR BROWSER CONSOLE
+
+**_NB_ - Always Import The libraries JS files before your own JS Link ([GSAP](https://cdnjs.com/libraries/gsap) [ScrollMagic](https://cdnjs.com/libraries/ScrollMagic))**
+
+**_Import in logical order BEWARE_**
 
 ### Tween
 
@@ -10,13 +14,13 @@
 TweenMax.to(elem, time, { vars });
 ```
 
-`.to()` / `.from()`
+- `.to()` / `.from()`
 
-`elem` is the element you want to animate _(Target this with its ID or ClassName)_
+- `elem` is the element you want to animate _(Target this with its ID or ClassName)_
 
-`time` is the duration of the Animation
+- `time` is the duration of the Animation
 
-`vars` is and JS Object of vars you want to Animate _(CSS)_
+- `vars` is an JS Object of vars you want to Animate _(CSS)_
 
 #### Stagger Tween
 
@@ -24,21 +28,21 @@ TweenMax.to(elem, time, { vars });
 TweenMax.staggerTo(elem, time, { vars }, timeBetween);
 ```
 
-`.staggerTo()` / `.staggerFrom()`
+- `.staggerTo()` / `.staggerFrom()`
 
-`elem` is the element you want to animate (Target this with its ID or ClassName)
+- `elem` is the element you want to animate _(Target this with its ID or ClassName)_
 
-`time` is the duration of the Animation
+- `time` is the duration of the Animation
 
-`vars` is and JS Object of vars you want to Animate (CSS)
+- `vars` is and JS Object of vars you want to Animate (CSS Properties _(See Further Down)_)
 
 `timeBetween` is a number value of time between the stagger animation
 
 #### Additional
 
-`.add()` Used to Add A Label to a Timeline
+- `.add()` Used to Add A Label to a Timeline
 
-`.set` Sets the initial css values of element
+- `.set()` Sets the initial css values of element
 
 ### Timeline _(Chaining Tweens)_
 
@@ -56,7 +60,7 @@ A GSAP Timeline is very similar to Tween but we _chain_ then together
 tl.to(element1, 1, { x: 50, y: 0 }).to(element2, 1, { x: 50, y: 0 });
 ```
 
-####Verbose Explanation
+#### Verbose Explanation
 
 When the Timeline named `tl` is called it will move _element1_ for one second then _element2_ will be moved for one second
 
@@ -66,11 +70,10 @@ When the Timeline named `tl` is called it will move _element1_ for one second th
 tl.to(element1, 1, { x: 50, y: 0 }).to(element2, 1, { x: 50, y: 0 }, TIME);
 ```
 
-`TIME` is a var that uses Relative Numbers
-
-`TIME = 0.5` will animate element2 one 0.5 seconds into timeline
-`TIME = "-=0.5"` will Overlap element2's animation 0.5 seconds before the previous animation ends
-`TIME = "+=0.5"` will Delay element2's animation 0.5 seconds after the previous animation ends
+- `TIME` is a var that uses Relative Numbers
+- `TIME = 0.5` will animate element2 one 0.5 seconds into timeline
+- `TIME = "-=0.5"` will Overlap element2's animation 0.5 seconds before the previous animation ends
+- `TIME = "+=0.5"` will Delay element2's animation 0.5 seconds after the previous animation ends
 
 #### Label
 
@@ -82,7 +85,7 @@ tl.add(LABEL)
   .to(element2, 1, { x: 50, y: 0 }, LABEL);
 ```
 
-## CSS Cheat Sheet (origin [here](https://gist.github.com/lunelson/7d83ca0c8bdfab170dd3))
+# CSS Cheat Sheet (origin [here](https://gist.github.com/lunelson/7d83ca0c8bdfab170dd3))
 
 ### Standard CSS properties
 
@@ -125,17 +128,17 @@ Special mentions:
 
 ## Control Your Timeline with Playback Functions
 
-`tl.play(1.5)` Play from 1.5s
-`tl.play(-1);` Play 1s from end
-`tl.pause();` Pause timeline
-`tl.resume();` Continue playback
-`tl.seek(1.5);` Go to 1.5s or 'label'
-`tl.reverse();` Reverse playback anytime
-`tl.timeScale(2);` Speed up timeline
-`tl.tweenTo('LABEL');` Skips To That Label in the Timeline
-`tl.progress(0.5);` Skip to halfway
+- `tl.play(1.5)` Play from 1.5s
+- `tl.play(-1);` Play 1s from end
+- `tl.pause();` Pause timeline
+- `tl.seek(1.5);` Go to 1.5s or 'label'
+- `tl.resume();` Continue playback
+- `tl.reverse();` Reverse playback anytime
+- `tl.timeScale(2);` Speed up timeline
+- `tl.tweenTo('LABEL');` Skips To That Label in the Timeline
+- `tl.progress(0.5);` Skip to halfway
 
-## JS events to Control Animation
+## JS events to Control Animation _(Self Study)_
 
 Most JS events can Trigger An Animation
 
@@ -156,7 +159,9 @@ button.addEventListener('mouseenter', function() {
 
 ## Bezier Plugin
 
-Passed as an Object the values of the path to and property called bezier.
+Passed as an array of objects the values define the path the element will follow.
+
+Read More In Docs [HERE](https://greensock.com/docs/Plugins/BezierPlugin)
 
 **Example**
 
@@ -175,7 +180,7 @@ var white1svgPath = {
 };
 ```
 
-and then that object is passed to a tween
+and then that object is passed to a tween as a css property
 
 ```javascript
 {
@@ -184,9 +189,9 @@ and then that object is passed to a tween
 }
 ```
 
-## Scroll Control Of Animation
+## Scroll Control of Animation
 
-ADD on for GSAP called Scroll Magic CDN [here](https://cdnjs.com/libraries/ScrollMagic)
+ADD-ON for GSAP called Scroll Magic CDN [HERE](https://cdnjs.com/libraries/ScrollMagic)
 
 **Boilerplate**
 
@@ -200,25 +205,24 @@ var controller = new ScrollMagic.Controller();
 var sceneOne = new ScrollMagic.Scene({
   triggerElement: '#trigger',
   duration: '100%',
-  triggerHook: 0.3
+  triggerHook: 0
 })
   .setTween(tl)
   .addIndicators()
   .addTo(controller);
 ```
 
-`triggerElement` where the trigger is in the dom
+- `triggerElement` where the trigger is in the dom _(Set In HTML)_
 
-`duration` is how long the scroll animation will be - if removed animation will trigger on scroll
-
-`triggerHook` Be in Class You had to be there
+- `duration` is how long the scroll animation will be - if removed animation will trigger on scroll and behave normally
+- `triggerHook` Where the Animation Will be Triggered _(0 -1 Value Range )_
 
 **Chain Elements**
 
-`.setTween()` is the Tween or Timeline to trigger on scroll.
+- `.setTween()` is the Tween or Timeline to trigger on scroll.
 
-`.addIndicators()` Only For Dev _(optional)_
+- `.addIndicators()` Only For Dev to see where the triggers are _(optional)_
 
-`.setPin('WHERE_TO_PIN')` Pins Scene and releases it after. _(optional)_
+- `.setPin('WHERE_TO_PIN')` Pins Scene and releases it after. _(optional)_
 
-`.addTo(controller)` Boilerplate work (Don't Worry)
+- `.addTo(controller)` Boilerplate work _(Don't Worry)_
